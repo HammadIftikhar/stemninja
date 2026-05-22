@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1-on-1 Tutoring — STEM Ninja</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.platform-card {
+  display:flex; flex-direction:column; gap:14px;
+  background:rgba(255,255,255,.04); border:1px solid var(--border);
+  border-radius:20px; padding:28px; transition:all .3s;
+}
+.platform-card:hover { border-color:rgba(245,166,35,.24); transform:translateY(-3px); }
+.platform-header { display:flex; align-items:center; gap:12px; }
+.platform-icon {
+  width:44px; height:44px; border-radius:11px;
+  display:flex; align-items:center; justify-content:center; font-size:22px;
+}
+.platform-icon.preply    { background:rgba(245,166,35,.14); }
+.platform-icon.superprof { background:rgba(232,57,74,.12); }
+.platform-icon.direct    { background:rgba(46,204,113,.12); }
+.platform-name    { font-family:'Ubuntu',sans-serif; font-weight:700; font-size:16px; }
+.platform-subject { font-size:11px; color:var(--gold); font-weight:700; letter-spacing:.5px; margin-top:1px; }
+.platform-desc    { font-size:13px; color:var(--muted); line-height:1.7; }
+.platform-link {
+  display:inline-flex; align-items:center; gap:6px;
+  font-size:12px; font-weight:700; color:var(--gold);
+  padding:9px 16px; border:1px solid rgba(245,166,35,.3);
+  border-radius:8px; transition:all .2s; margin-top:auto;
+  text-decoration:none;
+}
+.platform-link:hover { background:rgba(245,166,35,.1); }
+.divider { font-family:'Ubuntu',sans-serif; font-weight:700; font-size:16px; color:var(--gold); padding:40px 0 16px; }
+</style>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+<div class="page-wrap">
+
+  <section class="section">
+    <span class="label">1-on-1 Tutoring</span>
+    <h1>Book a Private Session</h1>
+    <p class="muted" style="margin-top:10px;max-width:520px">Find me on trusted tutoring platforms and book directly. All sessions are online, flexible scheduling, tailored to your exam board and pace.</p>
+  </section>
+
+  <section class="section" style="padding-top:0">
+
+    <div class="divider">⚛️ Physics Tutoring</div>
+    <div class="grid-auto">
+      <div class="platform-card">
+        <div class="platform-header">
+          <div class="platform-icon preply">🎓</div>
+          <div>
+            <div class="platform-name">Preply</div>
+            <div class="platform-subject">Physics — IGCSE &amp; A Level</div>
+          </div>
+        </div>
+        <p class="platform-desc">Book flexible 1-on-1 Physics sessions on Preply. Choose your time, track your progress, and get direct feedback after every lesson. Free trial lesson available.</p>
+        <a class="platform-link" href="https://preply.in/HAMMAD6EN615895410?ts=17794427" target="_blank">View Profile on Preply →</a>
+      </div>
+      <div class="platform-card">
+        <div class="platform-header">
+          <div class="platform-icon superprof">📚</div>
+          <div>
+            <div class="platform-name">Superprof</div>
+            <div class="platform-subject">Physics — IGCSE &amp; A Level</div>
+          </div>
+        </div>
+        <p class="platform-desc">Find my Superprof profile to read reviews, check rates, and book a free first lesson in Physics. CIE and Edexcel both covered.</p>
+        <a class="platform-link" href="https://www.superprof.pk/years-experience-expert-physics-tutor-for-igcse-level-level.html" target="_blank">View Profile on Superprof →</a>
+      </div>
+    </div>
+
+    <div class="divider">📐 Mathematics Tutoring</div>
+    <div class="grid-auto">
+      <div class="platform-card">
+        <div class="platform-header">
+          <div class="platform-icon superprof">📚</div>
+          <div>
+            <div class="platform-name">Superprof</div>
+            <div class="platform-subject">Maths — IGCSE &amp; A Level</div>
+          </div>
+        </div>
+        <p class="platform-desc">Book Maths sessions on Superprof. CIE and Edexcel covered. First lesson free — no commitment needed. Read reviews from past students.</p>
+        <a class="platform-link" href="https://www.superprof.pk/years-experience-expert-math-tutor-for-igcse-level-level.html" target="_blank">View Profile on Superprof →</a>
+      </div>
+      <div class="platform-card" style="border-color:rgba(245,166,35,.18);background:rgba(245,166,35,.04)">
+        <div class="platform-header">
+          <div class="platform-icon direct">✉️</div>
+          <div>
+            <div class="platform-name">Direct via STEM Ninja</div>
+            <div class="platform-subject">All Subjects · Fastest Response</div>
+          </div>
+        </div>
+        <p class="platform-desc">Prefer to book directly? Fill in the sign-up form and I'll personally reply within 24 hours with a free demo lesson link via Google Calendar (Patreon members).</p>
+        <a class="platform-link" href="signup.html">Sign Up Here →</a>
+      </div>
+    </div>
+
+    <div class="divider">💬 WhatsApp</div>
+    <div style="max-width:480px">
+      <div class="platform-card">
+        <div class="platform-header">
+          <div class="platform-icon direct">💬</div>
+          <div>
+            <div class="platform-name">WhatsApp</div>
+            <div class="platform-subject">Quick Questions &amp; Queries</div>
+          </div>
+        </div>
+        <p class="platform-desc">Have a quick question before signing up? Message me directly on WhatsApp.</p>
+        <a class="platform-link" href="https://wa.me/923230109633" target="_blank">+92 323 010 9633 →</a>
+      </div>
+    </div>
+
+  </section>
+</div>
+
+<footer>
+  <p>© 2025 STEM Ninja</p>
+  <div class="footer-links">
+    <a href="../index.html">Home</a>
+    <a href="signup.html">Sign Up</a>
+    <a href="https://linktr.ee/stemninja" target="_blank">Linktree</a>
+  </div>
+  <div class="footer-social">
+    <a href="https://wa.me/923230109633" target="_blank">💬</a>
+    <a href="https://linktr.ee/stemninja" target="_blank">🌿</a>
+  </div>
+</footer>
+<script src="../assets/nav.js"></script>
+</body>
+</html>

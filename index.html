@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STEM Ninja — Learn How to Think Better</title>
+<meta name="description" content="Expert IGCSE and A Level tutoring in Maths and Physics. 99% grade boost rate. CIE and Edexcel.">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+/* ── HOME-SPECIFIC ── */
+.hero {
+  position: relative;
+  min-height: calc(100vh - 68px);
+  display: flex; align-items: center;
+  padding: clamp(48px,8vw,96px) clamp(16px,5vw,56px);
+  overflow: hidden;
+}
+.hero-bg {
+  position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse 70% 60% at 65% 40%, rgba(245,166,35,.07) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 8%  80%, rgba(232,57,74,.05)  0%, transparent 60%);
+}
+.hero-dots {
+  position:absolute; inset:0; opacity:.03;
+  background-image:
+    linear-gradient(rgba(255,255,255,.6) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.6) 1px, transparent 1px);
+  background-size: 52px 52px;
+}
+.hero-content { position:relative; z-index:2; max-width:620px; }
+.hero-badge {
+  display:inline-flex; align-items:center; gap:8px;
+  background:rgba(245,166,35,.1); border:1px solid rgba(245,166,35,.24);
+  border-radius:100px; padding:6px 16px;
+  font-size:11px; font-weight:700; letter-spacing:.6px; color:var(--gold);
+  margin-bottom:26px;
+}
+.hero-title { margin-bottom:20px; }
+.hero-title .strike {
+  position:relative; color:rgba(255,255,255,.28);
+}
+.hero-title .strike::after {
+  content:''; position:absolute; left:-2px; right:-2px; top:52%;
+  height:3px; background:var(--red); border-radius:2px;
+  transform:translateY(-50%) rotate(-1.5deg);
+}
+.hero-title .gold { color:var(--gold); }
+.hero-sub { font-size:17px; line-height:1.78; color:var(--muted); margin-bottom:36px; max-width:500px; }
+.hero-actions { display:flex; gap:12px; flex-wrap:wrap; }
+
+.hero-stats {
+  position:absolute; right: clamp(16px,5vw,80px);
+  top:50%; transform:translateY(-50%);
+  display:flex; flex-direction:column; gap:14px;
+  z-index:2;
+}
+.stat-card {
+  background:rgba(255,255,255,.045); border:1px solid var(--border);
+  border-radius:16px; padding:18px 26px; text-align:center;
+  backdrop-filter:blur(10px); transition:all .3s;
+}
+.stat-card:hover { background:rgba(245,166,35,.08); border-color:rgba(245,166,35,.28); transform:translateX(-4px); }
+.stat-num { font-family:'Ubuntu',sans-serif; font-weight:700; font-size:30px; color:var(--gold); }
+.stat-lbl { font-size:11px; color:rgba(255,255,255,.48); margin-top:3px; }
+
+/* subjects */
+.subject-card { cursor:pointer; }
+.subject-icon { font-size:30px; margin-bottom:13px; }
+.subject-name { font-family:'Ubuntu',sans-serif; font-weight:700; font-size:17px; margin-bottom:6px; }
+.subject-desc { font-size:13px; color:rgba(255,255,255,.5); line-height:1.65; }
+
+/* reviews */
+.reviews-carousel { position:relative; overflow:hidden; margin-top:44px; }
+.reviews-track {
+  display:flex; gap:22px;
+  animation: scroll-reviews 40s linear infinite;
+  width: max-content;
+}
+.reviews-track:hover { animation-play-state:paused; }
+@keyframes scroll-reviews {
+  0%   { transform:translateX(0); }
+  100% { transform:translateX(-50%); }
+}
+.testi-card {
+  width:320px; flex-shrink:0;
+  background:rgba(255,255,255,.045); border:1px solid var(--border);
+  border-radius:20px; padding:26px;
+  transition:all .3s;
+}
+.testi-card:hover { border-color:rgba(245,166,35,.22); }
+.testi-stars { color:var(--gold); font-size:13px; margin-bottom:10px; }
+.testi-text { font-size:13px; line-height:1.8; color:rgba(255,255,255,.68); font-style:italic; margin-bottom:18px; }
+.testi-author { font-family:'Ubuntu',sans-serif; font-weight:700; font-size:14px; }
+.testi-school { font-size:11px; color:var(--gold); margin-top:2px; }
+
+@media(max-width:900px) {
+  .hero-stats { display:none; }
+  .hero { min-height:auto; padding:60px 20px 52px; }
+}
+</style>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<div class="page-wrap">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-dots"></div>
+    <div class="hero-content">
+      <div class="hero-badge anim-1">⚡ IGCSE · A Levels · Maths · Physics</div>
+      <h1 class="hero-title anim-2">
+        Learn how to<br>
+        <span class="strike">learn</span> <span class="gold">think better</span>
+      </h1>
+      <p class="hero-sub anim-3">
+        Become a ninja in Mathematics, Physics, Robotics, and Digital Technology.
+        Expert tutoring for IGCSE and A Levels — CIE &amp; Edexcel.
+      </p>
+      <div class="hero-actions anim-4">
+        <a class="btn btn-gold" href="pages/signup.html">Join STEM Ninja →</a>
+        <a class="btn btn-outline" href="pages/courses.html">Explore Courses</a>
+      </div>
+    </div>
+    <div class="hero-stats anim-4">
+      <div class="stat-card"><div class="stat-num">99%</div><div class="stat-lbl">Grade Boost Rate</div></div>
+      <div class="stat-card"><div class="stat-num">5+</div><div class="stat-lbl">Years Teaching</div></div>
+      <div class="stat-card"><div class="stat-num">A/A*</div><div class="stat-lbl">Average Outcome</div></div>
+    </div>
+  </section>
+
+  <!-- SUBJECTS -->
+  <section class="section section-alt">
+    <span class="label">What We Teach</span>
+    <h2>Master Every STEM Subject</h2>
+    <p class="muted" style="margin-top:10px;max-width:500px">Rigorous, exam-focused teaching across CIE and Edexcel. Free and premium resources for every subject.</p>
+    <div class="grid-auto" style="margin-top:40px">
+
+      <div class="card subject-card" onclick="location.href='pages/courses.html'">
+        <div class="subject-icon">📐</div>
+        <div class="subject-name">Mathematics</div>
+        <div class="subject-desc">CIE &amp; Edexcel IGCSE / A Level. Pure, Stats, Mechanics — mastered systematically.</div>
+        <div class="res-row">
+          <a class="res-btn res-free" href="pages/notes.html"><span class="res-dot"></span>FREE Notes</a>
+          <a class="res-btn res-paid" href="https://www.patreon.com/stemninja" target="_blank"><span class="res-dot"></span>Grade Booster</a>
+        </div>
+      </div>
+
+      <div class="card subject-card" onclick="location.href='pages/courses.html'">
+        <div class="subject-icon">⚛️</div>
+        <div class="subject-name">Physics</div>
+        <div class="subject-desc">Deep conceptual understanding built alongside exam technique and mark-scheme thinking.</div>
+        <div class="res-row">
+          <a class="res-btn res-free" href="pages/notes.html"><span class="res-dot"></span>FREE Notes</a>
+          <a class="res-btn res-paid" href="https://www.patreon.com/stem_ninja" target="_blank"><span class="res-dot"></span>Grade Booster</a>
+        </div>
+      </div>
+
+      <div class="card subject-card">
+        <div class="subject-icon">🤖</div>
+        <div class="subject-name">Robotics</div>
+        <div class="subject-desc">Hands-on programming and engineering design for the next generation of builders.</div>
+        <div class="res-row">
+          <a class="res-btn res-paid" href="https://www.patreon.com/stem_ninja" target="_blank"><span class="res-dot"></span>Patreon</a>
+        </div>
+      </div>
+
+      <div class="card subject-card">
+        <div class="subject-icon">💡</div>
+        <div class="subject-name">Digital Tech &amp; Entrepreneurship</div>
+        <div class="subject-desc">Think like a founder — creativity, problem-solving, and real-world STEM applications.</div>
+        <div class="res-row">
+          <a class="res-btn res-paid" href="https://www.patreon.com/stem_ninja" target="_blank"><span class="res-dot"></span>Patreon</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- REVIEWS CAROUSEL -->
+  <section class="section">
+    <span class="label">Student Reviews</span>
+    <h2>What Students Say</h2>
+    <p class="muted" style="margin-top:10px">Real reviews from Google, Preply &amp; Superprof.</p>
+
+    <div class="reviews-carousel">
+      <div class="reviews-track" id="reviews-track">
+        <!-- cards injected by JS below, then duplicated for infinite scroll -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA STRIP -->
+  <section class="section section-alt" style="text-align:center">
+    <h2>Ready to go from <span style="color:var(--gold)">Good to A*?</span></h2>
+    <p class="muted" style="margin:14px auto 32px;max-width:480px">Fill in the sign-up form — I'll get back to you within 24 hours with next steps.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <a class="btn btn-gold"    href="pages/signup.html">Sign Up Now →</a>
+      <a class="btn btn-outline" href="pages/tutoring.html">Find Me on Preply / Superprof</a>
+    </div>
+  </section>
+
+</div><!-- end page-wrap -->
+
+<footer>
+  <p>© 2025 STEM Ninja · Learn how to think better</p>
+  <div class="footer-links">
+    <a href="pages/about.html">About</a>
+    <a href="pages/courses.html">Courses</a>
+    <a href="https://linktr.ee/stemninja" target="_blank">Linktree</a>
+    <a href="https://www.patreon.com/stem_ninja" target="_blank">Patreon</a>
+    <a href="pages/signup.html">Sign Up</a>
+  </div>
+  <div class="footer-social">
+    <a href="https://wa.me/923230109633" target="_blank" title="WhatsApp">💬</a>
+    <a href="https://linktr.ee/stemninja" target="_blank" title="Linktree">🌿</a>
+  </div>
+</footer>
+
+<script src="assets/nav.js"></script>
+<script>
+// Fix nav paths for root index
+document.querySelectorAll('.nav-links a, .nav-mobile a').forEach(a => {
+  const href = a.getAttribute('href');
+  if (href && href.startsWith('../')) a.setAttribute('href', href.replace('../',''));
+});
+
+// Reviews data
+const reviews = [
+  { platform:'google',    badge:'⭐ Google',    name:'Jamal Khan',          school:'O-Level & A-Level Maths, Physics, Stats, Mechanics · Saudi Arabia',
+    stars:5, text:'Our son achieved excellent results — including an A*, A, and B. Hammad demonstrated deep subject knowledge and adapted lessons to our son\'s learning pace. Beyond academic results, our son developed a genuine interest in analytical problem-solving.' },
+  { platform:'google',    badge:'⭐ Google',    name:'Siavash Mahmoud Poor', school:'A Level Maths · CIE',
+    stars:5, text:'Hammad is an outstanding tutor — me and my friends couldn\'t have gotten the grades we wanted without his help. He was well knowledgeable in his field and knew exactly how to explain complex topics. The prices were also very reasonable.' },
+  { platform:'google',    badge:'⭐ Google',    name:'yusuf bagsheir',       school:'A Level Maths · CIE',
+    stars:5, text:'From the very first session, he showed a deep understanding of the syllabus and explained complex concepts in a simple and engaging manner. He would tailor each lesson to address specific areas of difficulty. I highly recommend Hammad.' },
+  { platform:'google',    badge:'⭐ Google',    name:'Sana Arfan',           school:'Physics · CIE',
+    stars:5, text:'The way you explain concepts makes them easy to understand and remember. You\'ve made the subject so approachable that I genuinely enjoy working through physics past papers now. Thank you for the clarity, especially on the challenging topics.' },
+  { platform:'google',    badge:'⭐ Google',    name:'Umme Mujtaba',         school:'Physics',
+    stars:5, text:'His way of teaching is quite interesting and interactive. He breaks problems down step by step. He keeps checking students\' level by giving quizzes and is always ready to take feedback from parents. He is very punctual and regular.' },
+  { platform:'google',    badge:'⭐ Google',    name:'Mia Muzz',             school:'Maths',
+    stars:5, text:'Sir Hammad has a very interesting way of teaching the toughest thing in the easiest way. He gives homework and tests from past papers to prepare the kids well. I would definitely recommend him to other students.' },
+  { platform:'preply',    badge:'🎓 Preply',   name:'Zaki',                 school:'A Level Physics',
+    stars:5, text:'Hammad has been excellent in teaching A-level Physics, making complex topics easy to understand with patience and clarity. His teaching style keeps lessons engaging and helps build confidence. We are truly grateful for his dedication and effort.' },
+  { platform:'preply',    badge:'🎓 Preply',   name:'Phil',                 school:'A Level Physics',
+    stars:5, text:'Hammad is an excellent teacher who is very effective at explaining difficult topics that are tricky to grasp. He makes sure to cover key points, explains derivations thoroughly, and involves his students. He helped me boost my grade significantly.' },
+  { platform:'preply',    badge:'🎓 Preply',   name:'Ana',                  school:'A Level Physics',
+    stars:5, text:'Hammad is an excellent tutor. He takes the time to prepare his classes, making each lesson enjoyable and engaging. He clearly demonstrates a strong understanding of the course he is teaching my son.' },
+  { platform:'superprof', badge:'📚 Superprof',name:'Sofia',                school:'Maths Student',
+    stars:5, text:'Teacher Hammad conducted the lesson very well. He is energetic, dedicated, and explains everything clearly and patiently. The class was engaging and easy to follow. We are really happy with his teaching.' },
+  { platform:'preply',    badge:'🎓 Preply',   name:'Huzaifa',              school:'A Levels Maths · Al Salam School, Dubai',
+    stars:5, text:'In the beginning I was very unsure of how classes would go… but we honestly picked up the pace quite well. I felt like we did an adequate amount of questions that helped me for my finals — and I saw improvements in myself beyond just maths.' },
+];
+
+function stars(n) { return '★'.repeat(n) + '☆'.repeat(5-n); }
+function badgeClass(p) { return {google:'badge-google',preply:'badge-preply',superprof:'badge-superprof'}[p]; }
+
+const track = document.getElementById('reviews-track');
+// Render twice for infinite loop illusion
+[...reviews, ...reviews].forEach(r => {
+  track.innerHTML += `
+  <div class="testi-card">
+    <span class="platform-badge ${badgeClass(r.platform)}">${r.badge}</span>
+    <div class="testi-stars">${stars(r.stars)}</div>
+    <p class="testi-text">"${r.text}"</p>
+    <div class="testi-author">${r.name}</div>
+    <div class="testi-school">${r.school}</div>
+  </div>`;
+});
+</script>
+</body>
+</html>

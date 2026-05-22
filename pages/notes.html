@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notes & Resources — STEM Ninja</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.coming-box {
+  margin:0 clamp(16px,5vw,56px) 60px;
+  background:rgba(255,255,255,.025); border:2px dashed rgba(245,166,35,.28);
+  border-radius:24px; padding:clamp(48px,7vw,80px) clamp(20px,5vw,56px);
+  text-align:center;
+}
+.coming-icon { font-size:52px; margin-bottom:18px; }
+.coming-box h2 { margin-bottom:14px; }
+.coming-box p  { color:var(--muted); max-width:440px; margin:0 auto 26px; font-size:15px; line-height:1.75; }
+.note-card {
+  background:rgba(255,255,255,.04); border:1px solid var(--border);
+  border-radius:18px; padding:24px; position:relative; overflow:hidden;
+}
+.note-card::after {
+  content:'COMING SOON'; position:absolute; top:14px; right:14px;
+  font-size:8px; font-weight:700; letter-spacing:2px;
+  background:rgba(245,166,35,.13); color:var(--gold);
+  padding:3px 8px; border-radius:4px;
+}
+.note-subject { font-size:10px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--gold); margin-bottom:7px; }
+.note-title { font-family:'Ubuntu',sans-serif; font-weight:700; font-size:15px; margin-bottom:6px; }
+.note-desc { font-size:12px; color:rgba(255,255,255,.42); line-height:1.65; }
+</style>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+<div class="page-wrap">
+
+  <section class="section">
+    <span class="label">Study Resources</span>
+    <h1>Notes &amp; Revision Materials</h1>
+    <p class="muted" style="margin-top:10px;max-width:500px">Topic notes, formula sheets, worked examples. Free resources on Google Drive — premium packs on Patreon.</p>
+    <div class="res-row" style="margin-top:22px">
+      <a class="res-btn res-free" style="font-size:13px;padding:10px 20px" href="https://drive.google.com/drive/folders/YOUR_FOLDER_ID" target="_blank"><span class="res-dot"></span>FREE — Google Drive</a>
+      <a class="res-btn res-paid" style="font-size:13px;padding:10px 20px" href="https://www.patreon.com/stem_ninja" target="_blank"><span class="res-dot"></span>PREMIUM — Patreon</a>
+    </div>
+  </section>
+
+  <div class="coming-box">
+    <div class="coming-icon">📚</div>
+    <h2>Notes Library — Coming Soon</h2>
+    <p>A full library of topic-by-topic notes for IGCSE and A Level Maths &amp; Physics. Sign up to be notified when they drop.</p>
+    <a class="btn btn-gold" href="signup.html">Get Notified →</a>
+  </div>
+
+  <section class="section" style="padding-top:0">
+    <span class="label">Preview Topics</span>
+    <h2 style="margin-bottom:28px">What's Coming</h2>
+    <div class="grid-auto">
+      <div class="note-card"><div class="note-subject">A Level Maths — CIE 9709</div><div class="note-title">Pure 1 — Full Topic Notes</div><div class="note-desc">Algebra, functions, coordinate geometry, sequences, differentiation &amp; integration.</div></div>
+      <div class="note-card"><div class="note-subject">A Level Maths — CIE 9709</div><div class="note-title">Statistics 1 — Complete Guide</div><div class="note-desc">Data representation, probability, binomial &amp; normal distributions, hypothesis testing.</div></div>
+      <div class="note-card"><div class="note-subject">A Level Physics — CIE 9702</div><div class="note-title">Mechanics — Full Notes</div><div class="note-desc">Kinematics, forces, Newton's laws, energy, momentum, circular motion.</div></div>
+      <div class="note-card"><div class="note-subject">A Level Physics — CIE 9702</div><div class="note-title">Electricity — Topic Notes</div><div class="note-desc">Current, resistance, circuits, EMF, internal resistance, potential dividers.</div></div>
+      <div class="note-card"><div class="note-subject">IGCSE Maths — CIE 0580</div><div class="note-title">Number &amp; Algebra Pack</div><div class="note-desc">Indices, surds, quadratics, simultaneous equations, sequences.</div></div>
+      <div class="note-card"><div class="note-subject">IGCSE Physics — CIE 0625</div><div class="note-title">Waves &amp; Optics Notes</div><div class="note-desc">Wave properties, reflection, refraction, EM spectrum, lenses.</div></div>
+      <div class="note-card"><div class="note-subject">IGCSE Maths — Edexcel</div><div class="note-title">Geometry &amp; Trigonometry</div><div class="note-desc">Bearings, Pythagoras, SOHCAHTOA, circle theorems, vectors.</div></div>
+      <div class="note-card"><div class="note-subject">A Level Maths — Mechanics</div><div class="note-title">Mechanics 1 — Full Notes</div><div class="note-desc">Kinematics, forces, moments, connected particles, projectile motion.</div></div>
+    </div>
+  </section>
+
+</div>
+<footer>
+  <p>© 2025 STEM Ninja</p>
+  <div class="footer-links">
+    <a href="../index.html">Home</a>
+    <a href="signup.html">Sign Up</a>
+    <a href="https://www.patreon.com/stem_ninja" target="_blank">Patreon</a>
+  </div>
+  <div class="footer-social">
+    <a href="https://wa.me/923230109633" target="_blank">💬</a>
+    <a href="https://linktr.ee/stemninja" target="_blank">🌿</a>
+  </div>
+</footer>
+<script src="../assets/nav.js"></script>
+</body>
+</html>

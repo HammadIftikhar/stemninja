@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grade Boosters — STEM Ninja</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.booster-card {
+  background:rgba(255,255,255,.04); border:1px solid var(--border);
+  border-radius:24px; padding:32px; transition:all .3s;
+  position:relative; overflow:hidden;
+}
+.booster-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; }
+.booster-card.gold::before  { background:var(--gold); }
+.booster-card.red::before   { background:var(--red); }
+.booster-card.blue::before  { background:#4a90d9; }
+.booster-card:hover { transform:translateY(-4px); border-color:rgba(255,255,255,.14); box-shadow:0 20px 40px rgba(0,0,0,.3); }
+.booster-icon  { font-size:34px; margin-bottom:16px; }
+.booster-title { margin-bottom:10px; }
+.booster-desc  { font-size:14px; color:var(--muted); line-height:1.75; margin-bottom:18px; }
+.booster-tag   { display:inline-block; font-size:10px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; padding:4px 10px; border-radius:5px; }
+.booster-tag.gold { background:rgba(245,166,35,.14); color:var(--gold); }
+.booster-tag.red  { background:rgba(232,57,74,.12);  color:#f07888; }
+.booster-tag.blue { background:rgba(74,144,217,.12); color:#7ab8f5; }
+</style>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+<div class="page-wrap">
+
+  <section class="section">
+    <span class="label">Grade Boosters</span>
+    <h1>Go from Good to <span style="color:var(--gold)">A*</span></h1>
+    <p class="muted" style="margin-top:10px;max-width:500px">Focused resources and intensive sessions designed to push your grade over the line.</p>
+    <div class="res-row" style="margin-top:22px">
+      <a class="res-btn res-free" style="font-size:13px;padding:10px 20px" href="https://drive.google.com/drive/folders/YOUR_FOLDER_ID" target="_blank"><span class="res-dot"></span>FREE Resources</a>
+      <a class="res-btn res-paid" style="font-size:13px;padding:10px 20px" href="https://www.patreon.com/stem_ninja" target="_blank"><span class="res-dot"></span>Premium Packs — Patreon</a>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="grid-auto">
+
+      <div class="booster-card gold">
+        <div class="booster-icon">📝</div>
+        <h3 class="booster-title">Past Paper Packs</h3>
+        <p class="booster-desc">Curated collections of the most frequently tested question types, organised by topic and difficulty. Work smarter, not harder.</p>
+        <span class="booster-tag gold">Patreon — Premium</span>
+      </div>
+
+      <div class="booster-card red">
+        <div class="booster-icon">🔥</div>
+        <h3 class="booster-title">Exam Intensive Bootcamp</h3>
+        <p class="booster-desc">A targeted crash-course 4–6 weeks before your exam. Pure exam technique, time management, and mark-scheme fluency.</p>
+        <span class="booster-tag red">Coming Soon</span>
+      </div>
+
+      <div class="booster-card blue">
+        <div class="booster-icon">⚡</div>
+        <h3 class="booster-title">Formula Flashcard Sets</h3>
+        <p class="booster-desc">Every formula, theorem, and key definition — organised for rapid revision in the days before your exam.</p>
+        <span class="booster-tag blue">Free — Google Drive</span>
+      </div>
+
+      <div class="booster-card gold">
+        <div class="booster-icon">🧩</div>
+        <h3 class="booster-title">Topic Weak-Point Sessions</h3>
+        <p class="booster-desc">Identify your top 3 weakest topics and get a laser-focused 2-hour session on each. Data-driven and exam-aware.</p>
+        <span class="booster-tag gold">Book via Sign Up</span>
+      </div>
+
+      <div class="booster-card red">
+        <div class="booster-icon">📈</div>
+        <h3 class="booster-title">Grade Progress Tracker</h3>
+        <p class="booster-desc">A personalised tracking system to monitor performance across topics and see your trajectory towards your target grade.</p>
+        <span class="booster-tag red">Coming Soon</span>
+      </div>
+
+      <div class="booster-card blue">
+        <div class="booster-icon">🎯</div>
+        <h3 class="booster-title">Examiner's Eye Review</h3>
+        <p class="booster-desc">Submit a mock paper and get line-by-line feedback on exactly where you're losing marks and how to fix it.</p>
+        <span class="booster-tag blue">Available on Request</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section section-alt" style="text-align:center">
+    <h2>Ready to boost your grade?</h2>
+    <p class="muted" style="margin:12px auto 28px;max-width:440px">Sign up now or access premium packs directly on Patreon.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <a class="btn btn-gold"         href="signup.html">Sign Up →</a>
+      <a class="btn btn-outline-gold" href="https://www.patreon.com/stem_ninja" target="_blank">Patreon Packs</a>
+    </div>
+  </section>
+
+</div>
+<footer>
+  <p>© 2025 STEM Ninja</p>
+  <div class="footer-links">
+    <a href="../index.html">Home</a>
+    <a href="signup.html">Sign Up</a>
+    <a href="https://www.patreon.com/stem_ninja" target="_blank">Patreon</a>
+  </div>
+  <div class="footer-social">
+    <a href="https://wa.me/923230109633" target="_blank">💬</a>
+    <a href="https://linktr.ee/stemninja" target="_blank">🌿</a>
+  </div>
+</footer>
+<script src="../assets/nav.js"></script>
+</body>
+</html>

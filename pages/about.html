@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — STEM Ninja</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.about-hero {
+  padding: clamp(52px,8vw,88px) clamp(16px,5vw,56px);
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: clamp(32px,6vw,80px);
+  align-items: center;
+  min-height: calc(100vh - 68px);
+}
+.photo-wrap { position:relative; }
+.photo-frame {
+  width:100%;
+  aspect-ratio: 3/4;
+  border-radius: 28px;
+  overflow: hidden;
+  background: transparent;
+  position: relative;
+}
+.photo-frame img {
+  width:100%; height:100%;
+  object-fit: cover;
+  object-position: center top;
+  display:block;
+}
+.photo-credential {
+  position:absolute;
+  background: rgba(13,27,62,.94);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:14px; padding:13px 18px;
+  backdrop-filter:blur(12px);
+}
+.photo-credential.tr { top:-16px; right:-20px; }
+.photo-credential.bl { bottom:28px; left:-24px; }
+.cred-label { font-size:10px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:var(--gold); }
+.cred-value { font-family:'Ubuntu',sans-serif; font-weight:700; font-size:14px; margin-top:2px; }
+
+.about-body { font-size:16px; line-height:1.8; color:var(--muted); margin-bottom:20px; }
+.quals { display:flex; flex-direction:column; gap:10px; margin-bottom:32px; }
+.qual { display:flex; align-items:center; gap:10px; font-size:14px; color:rgba(255,255,255,.78); }
+.qual-dot { width:6px; height:6px; border-radius:50%; background:var(--gold); flex-shrink:0; }
+.btn-row { display:flex; gap:12px; flex-wrap:wrap; }
+
+.phil-section { padding: clamp(48px,7vw,80px) clamp(16px,5vw,56px); background:rgba(255,255,255,.025); }
+.phil-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px; margin-top:36px; }
+.phil-card { padding:28px; }
+.phil-icon { font-size:28px; margin-bottom:12px; }
+.phil-card h3 { margin-bottom:8px; }
+.phil-card p { font-size:13px; color:var(--muted); line-height:1.7; }
+
+@media(max-width:900px) {
+  .about-hero { grid-template-columns:1fr; }
+  .photo-frame { max-width:340px; margin:0 auto; }
+  .photo-credential.tr { top:-10px; right:-8px; }
+  .photo-credential.bl { bottom:16px; left:-8px; }
+}
+</style>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+<div class="page-wrap">
+
+  <section class="about-hero">
+    <div class="photo-wrap">
+      <div class="photo-frame">
+        <img src="../assets/hammad_grey.png" alt="Hammad Iftikhar — Founder of STEM Ninja">
+      </div>
+      <div class="photo-credential tr">
+        <div class="cred-label">Qualification</div>
+        <div class="cred-value">M.S. Electrical Eng.</div>
+      </div>
+      <div class="photo-credential bl">
+        <div class="cred-label">Universities</div>
+        <div class="cred-value">LUMS · NUST</div>
+      </div>
+    </div>
+
+    <div>
+      <span class="label">About the Founder</span>
+      <h1 style="margin-bottom:18px">Hi, I'm<br><span style="color:var(--gold)">Hammad.</span></h1>
+      <p class="about-body">
+        I founded STEM Ninja with a simple belief: students don't fail because they're not smart — they fail because they haven't been taught <em>how to think</em>. My teaching is built entirely around that principle.
+      </p>
+      <p class="about-body">
+        With 5+ years teaching Physics and Mathematics at IGCSE and A Level, I've helped hundreds of students go from Cs and Ds to A and A* grades. My 99% success rate isn't luck — it's method, patience, and relentless focus on the student.
+      </p>
+      <div class="quals">
+        <div class="qual"><div class="qual-dot"></div>M.S. Electrical Engineering — LUMS (2019)</div>
+        <div class="qual"><div class="qual-dot"></div>B.E. Mechatronics Engineering — NUST (2016)</div>
+        <div class="qual"><div class="qual-dot"></div>Certified by EdTW &amp; EXCEED Academy</div>
+        <div class="qual"><div class="qual-dot"></div>Specialist in CIE &amp; Edexcel exam strategy</div>
+        <div class="qual"><div class="qual-dot"></div>Students from UAE, Saudi Arabia, UK, Pakistan &amp; beyond</div>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-gold"    href="signup.html">Book a Free Demo →</a>
+        <a class="btn btn-outline" href="tutoring.html">Find Me on Preply / Superprof</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="phil-section">
+    <span class="label">Teaching Philosophy</span>
+    <h2>How I Teach</h2>
+    <div class="phil-grid">
+      <div class="card phil-card">
+        <div class="phil-icon">🧠</div>
+        <h3>Thinking Over Memorising</h3>
+        <p>I teach students to understand the <em>why</em> behind every concept so they can tackle any question — even completely unseen ones.</p>
+      </div>
+      <div class="card phil-card">
+        <div class="phil-icon">📊</div>
+        <h3>Mark-Scheme Mastery</h3>
+        <p>Understanding exactly what examiners want is a learnable skill. I break down past papers so students earn every available mark.</p>
+      </div>
+      <div class="card phil-card">
+        <div class="phil-icon">🎯</div>
+        <h3>Targeted Practice</h3>
+        <p>No filler. Every session targets specific weaknesses with focused problem sets and immediate, detailed feedback.</p>
+      </div>
+      <div class="card phil-card">
+        <div class="phil-icon">🚀</div>
+        <h3>Beyond the Subject</h3>
+        <p>Students consistently report improvements in confidence, analytical thinking, and self-belief that go far beyond exam results.</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <p>© 2025 STEM Ninja · Learn how to think better</p>
+  <div class="footer-links">
+    <a href="../index.html">Home</a>
+    <a href="courses.html">Courses</a>
+    <a href="https://linktr.ee/stemninja" target="_blank">Linktree</a>
+    <a href="signup.html">Sign Up</a>
+  </div>
+  <div class="footer-social">
+    <a href="https://wa.me/923230109633" target="_blank">💬</a>
+    <a href="https://linktr.ee/stemninja" target="_blank">🌿</a>
+  </div>
+</footer>
+
+<script src="../assets/nav.js"></script>
+</body>
+</html>

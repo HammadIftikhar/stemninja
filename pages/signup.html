@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up — STEM Ninja</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.signup-wrap {
+  padding: clamp(52px,8vw,88px) clamp(16px,5vw,56px);
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: clamp(32px,6vw,72px);
+  align-items: start;
+}
+.pricing-card {
+  background:rgba(255,255,255,.04); border:1px solid var(--border);
+  border-radius:18px; padding:22px; margin-bottom:14px; transition:all .3s;
+}
+.pricing-card:hover { border-color:rgba(245,166,35,.28); }
+.pricing-level { font-size:10px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--gold); margin-bottom:7px; }
+.pricing-price { font-family:'Ubuntu',sans-serif; font-weight:700; font-size:26px; margin-bottom:3px; }
+.pricing-price span { font-size:13px; font-weight:400; color:rgba(255,255,255,.42); }
+.pricing-note { font-size:12px; color:rgba(255,255,255,.48); }
+
+.form-box {
+  background:rgba(255,255,255,.04); border:1px solid var(--border);
+  border-radius:24px; padding:clamp(24px,5vw,40px);
+}
+.form-box h2 { margin-bottom:24px; font-size:22px; }
+
+.success-msg {
+  display:none;
+  background:rgba(46,204,113,.1); border:1px solid rgba(46,204,113,.3);
+  border-radius:14px; padding:28px; text-align:center;
+}
+.success-msg h3 { font-family:'Ubuntu',sans-serif; color:#2ecc71; margin-bottom:10px; }
+.success-msg p { font-size:14px; color:var(--muted); line-height:1.7; }
+.success-links { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:20px; }
+
+@media(max-width:860px) {
+  .signup-wrap { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+<div class="page-wrap">
+
+  <div class="signup-wrap">
+
+    <!-- LEFT: Info & Pricing -->
+    <div>
+      <span class="label">Join STEM Ninja</span>
+      <h1 style="margin-bottom:16px">Start Your Journey<br>to <span style="color:var(--gold)">A*</span></h1>
+      <p class="muted" style="margin-bottom:28px;font-size:15px;line-height:1.8">
+        Fill in the form and I'll get back to you within 24 hours with next steps — including which platform to book your free demo lesson on.
+      </p>
+
+      <div class="pricing-card">
+        <div class="pricing-level">IGCSE / O Levels</div>
+        <div class="pricing-price">$120 <span>/ month</span></div>
+        <div class="pricing-note">Maths or Physics · 3–4 days/week</div>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-level">A Levels</div>
+        <div class="pricing-price">$150 <span>/ month</span></div>
+        <div class="pricing-note">Maths or Physics · 3–4 days/week</div>
+      </div>
+
+      <p style="font-size:12px;color:rgba(255,255,255,.3);margin-top:14px;line-height:1.7">
+        ✅ All info kept strictly confidential<br>
+        ✅ Free demo lesson available on request<br>
+        ✅ Grade Booster Packs available on Patreon
+      </p>
+    </div>
+
+    <!-- RIGHT: Form -->
+    <div class="form-box">
+      <h2>Student Enrolment Form</h2>
+
+      <!-- Success message (shown after submit) -->
+      <div class="success-msg" id="success-msg">
+        <h3>🎉 You're in!</h3>
+        <p>Thanks for signing up. Check your email for next steps — including how to book your free demo lesson.<br><br>
+        In the meantime, you can find me on:</p>
+        <div class="success-links">
+          <a class="btn btn-outline-gold btn-sm" href="https://preply.com/en/tutor/YOUR_ID" target="_blank">🎓 Preply (Physics)</a>
+          <a class="btn btn-outline-gold btn-sm" href="https://www.superprof.com/YOUR_PROFILE" target="_blank">📚 Superprof (Maths &amp; Physics)</a>
+          <a class="btn btn-outline-gold btn-sm" href="https://www.patreon.com/stemninja" target="_blank">📅 Book via Patreon</a>
+        </div>
+      </div>
+
+      <!-- The form -->
+      <form id="signup-form" novalidate>
+        <div class="form-group">
+          <label class="form-label">Full Name *</label>
+          <input class="form-input" type="text" name="name" placeholder="Your full name" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address *</label>
+          <input class="form-input" type="email" name="email" placeholder="your@email.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">WhatsApp Number</label>
+          <input class="form-input" type="tel" name="whatsapp" placeholder="+1 234 567 8900">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Course Level *</label>
+          <select class="form-select" name="level" required>
+            <option value="">Select level...</option>
+            <option value="IGCSE">IGCSE / O Levels</option>
+            <option value="ALevel">A Levels</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Subject *</label>
+          <select class="form-select" name="subject" required>
+            <option value="">Select subject...</option>
+            <option value="Maths_CIE">Mathematics (CIE)</option>
+            <option value="Maths_Edexcel">Mathematics (Edexcel)</option>
+            <option value="Physics_CIE">Physics (CIE)</option>
+            <option value="Physics_Edexcel">Physics (Edexcel)</option>
+            <option value="Both">Both Maths &amp; Physics</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Current Grade (if known)</label>
+          <input class="form-input" type="text" name="grade" placeholder="e.g. B, C, or unsure">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Exam Date (if known)</label>
+          <input class="form-input" type="text" name="examdate" placeholder="e.g. May/June 2025">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Anything else you'd like us to know?</label>
+          <textarea class="form-textarea" name="notes" placeholder="Goals, concerns, availability..."></textarea>
+        </div>
+        <button class="form-submit" type="submit" id="submit-btn">Submit &amp; Get Started →</button>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 STEM Ninja · Learn how to think better</p>
+  <div class="footer-links">
+    <a href="../index.html">Home</a>
+    <a href="courses.html">Courses</a>
+    <a href="https://linktr.ee/stemninja" target="_blank">Linktree</a>
+  </div>
+  <div class="footer-social">
+    <a href="https://wa.me/923230109633" target="_blank">💬</a>
+    <a href="https://linktr.ee/stemninja" target="_blank">🌿</a>
+  </div>
+</footer>
+
+<script src="../assets/nav.js"></script>
+<script>
+/*
+  ══════════════════════════════════════════════════════════
+  FORM SUBMISSION → Google Apps Script Web App
+  
+  SETUP INSTRUCTIONS:
+  1. Open Google Sheets → Extensions → Apps Script
+  2. Paste the code from assets/apps-script.gs
+  3. Deploy → New deployment → Web App
+     - Execute as: Me
+     - Who has access: Anyone
+  4. Copy the Web App URL and paste it below as SCRIPT_URL
+  ══════════════════════════════════════════════════════════
+*/
+const SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+
+document.getElementById('signup-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submit-btn');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+
+  const data = new FormData(this);
+  const payload = {};
+  data.forEach((v,k) => payload[k] = v);
+
+  try {
+    await fetch(SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    // no-cors means we can't read response, but submission goes through
+    document.getElementById('signup-form').style.display = 'none';
+    document.getElementById('success-msg').style.display = 'block';
+  } catch(err) {
+    btn.textContent = '⚠️ Error — please try again';
+    btn.disabled = false;
+    console.error(err);
+  }
+});
+</script>
+</body>
+</html>

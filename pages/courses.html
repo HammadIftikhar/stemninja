@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Courses — STEM Ninja</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.courses-hero { padding:clamp(52px,8vw,80px) clamp(16px,5vw,56px) 36px; text-align:center; }
+.course-tabs { display:flex; gap:8px; justify-content:center; margin:32px 0; flex-wrap:wrap; }
+.tab-btn {
+  padding:10px 24px; border-radius:10px;
+  font-family:'Ubuntu',sans-serif; font-weight:600; font-size:14px;
+  border:1px solid rgba(255,255,255,.14); background:transparent;
+  color:rgba(255,255,255,.55); cursor:pointer; transition:all .2s;
+}
+.tab-btn.active { background:var(--gold); color:var(--navy); border-color:var(--gold); }
+.tab-btn:hover:not(.active) { border-color:var(--gold); color:var(--gold); }
+.courses-grid {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+  gap:20px; padding:0 clamp(16px,5vw,56px) 80px;
+}
+.course-card {
+  background:rgba(255,255,255,.04); border:1px solid var(--border);
+  border-radius:22px; overflow:hidden; transition:all .3s; cursor:pointer;
+}
+.course-card:hover { transform:translateY(-5px); border-color:rgba(245,166,35,.28); box-shadow:0 20px 44px rgba(0,0,0,.3); }
+.course-thumb { height:150px; display:flex; align-items:center; justify-content:center; font-size:52px; }
+.course-thumb.math    { background:linear-gradient(135deg,#1a3a6e,#0d1b3e); }
+.course-thumb.physics { background:linear-gradient(135deg,#3a1a6e,#1b0d3e); }
+.course-body { padding:22px; }
+.course-board { display:inline-block; font-size:10px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; padding:3px 9px; border-radius:5px; background:rgba(245,166,35,.14); color:var(--gold); margin-bottom:9px; }
+.course-name { font-family:'Ubuntu',sans-serif; font-weight:700; font-size:18px; margin-bottom:5px; }
+.course-code { font-size:11px; color:rgba(255,255,255,.36); margin-bottom:12px; }
+.course-features { list-style:none; display:flex; flex-direction:column; gap:6px; }
+.course-features li { font-size:12px; color:rgba(255,255,255,.56); display:flex; align-items:center; gap:7px; }
+.course-features li::before { content:'✓'; color:var(--gold); font-weight:700; font-size:11px; }
+</style>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+<div class="page-wrap">
+
+  <div class="courses-hero">
+    <span class="label">Courses</span>
+    <h1>Find Your Course</h1>
+    <p class="muted" style="margin:10px auto 0;max-width:460px">CIE and Edexcel — IGCSE and A Level Maths &amp; Physics.</p>
+    <div class="course-tabs">
+      <button class="tab-btn active" onclick="switchTab('igcse',this)">IGCSE / O Levels</button>
+      <button class="tab-btn" onclick="switchTab('alevels',this)">A Levels</button>
+    </div>
+  </div>
+
+  <div class="courses-grid" id="courses-grid"></div>
+
+</div>
+<footer>
+  <p>© 2025 STEM Ninja</p>
+  <div class="footer-links">
+    <a href="../index.html">Home</a>
+    <a href="signup.html">Sign Up</a>
+    <a href="https://www.patreon.com/stemninja" target="_blank">Patreon</a>
+  </div>
+  <div class="footer-social">
+    <a href="https://wa.me/923230109633" target="_blank">💬</a>
+    <a href="https://linktr.ee/stemninja" target="_blank">🌿</a>
+  </div>
+</footer>
+<script src="../assets/nav.js"></script>
+<script>
+const coursesData = {
+  igcse:[
+    {emoji:'📐',subject:'Mathematics',board:'CIE',code:'0580',thumb:'math',features:['Algebra & Functions','Geometry & Trigonometry','Statistics & Probability','Past paper practice']},
+    {emoji:'📐',subject:'Mathematics',board:'Edexcel',code:'Spec A',thumb:'math',features:['Number & Algebra','Shape & Space','Data Handling','Edexcel mark scheme focus']},
+    {emoji:'⚛️',subject:'Physics',board:'CIE',code:'0625',thumb:'physics',features:['Mechanics & Waves','Electricity & Magnetism','Thermal Physics','Practical skills']},
+    {emoji:'⚛️',subject:'Physics',board:'Edexcel',code:'IGCSE',thumb:'physics',features:['Forces & Motion','Electromagnetic Effects','Atomic Physics','Edexcel exam technique']},
+  ],
+  alevels:[
+    {emoji:'📐',subject:'Mathematics',board:'CIE',code:'9709',thumb:'math',features:['Pure 1, 2 & 3','Statistics 1 & 2','Mechanics 1 & 2','Structured exam prep']},
+    {emoji:'📐',subject:'Mathematics',board:'Edexcel IAL',code:'IAL',thumb:'math',features:['Core Maths WMA','Statistics WST','Mechanics WME','IAL-specific strategy']},
+    {emoji:'⚛️',subject:'Physics',board:'CIE',code:'9702',thumb:'physics',features:['Particle Physics','Waves & Optics','Electricity & Fields','Advanced practicals']},
+    {emoji:'⚛️',subject:'Physics',board:'Edexcel IAL',code:'IAL',thumb:'physics',features:['Mechanics','Fields & Capacitors','Nuclear Physics','IAL structured Qs']},
+  ]
+};
+function renderCourses(level) {
+  document.getElementById('courses-grid').innerHTML = coursesData[level].map(c => `
+    <div class="course-card" onclick="location.href='signup.html'">
+      <div class="course-thumb ${c.thumb}">${c.emoji}</div>
+      <div class="course-body">
+        <span class="course-board">${c.board}</span>
+        <div class="course-name">${c.subject}</div>
+        <div class="course-code">Code: ${c.code}</div>
+        <ul class="course-features">${c.features.map(f=>`<li>${f}</li>`).join('')}</ul>
+        <div class="res-row" style="margin-top:14px">
+          <a class="res-btn res-free" href="notes.html"><span class="res-dot"></span>FREE Notes</a>
+          <a class="res-btn res-paid" href="https://www.patreon.com/stemninja" target="_blank"><span class="res-dot"></span>Booster Pack</a>
+        </div>
+      </div>
+    </div>`).join('');
+}
+function switchTab(level, btn) {
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderCourses(level);
+}
+renderCourses('igcse');
+</script>
+</body>
+</html>
